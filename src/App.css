@@ -1,38 +1,365 @@
-.App {
-  text-align: center;
+.welcome{
+    margin:20vh 20vw 20vh 20vw;
+    color:white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.welcome h6{
+    margin:3rem;
+    letter-spacing: 2px;
+    font-size:larger;
+}
+.welcome button{
+    margin:0 5rem 3rem 5rem;
+}
+.socialBar{
+    margin:0 40px 0 40px;
+    color:grey
+}
+.socialBarTitle{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.socialBarItems1{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    
+}
+.socialBarItems{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin:2rem 2rem 0 2rem;
+}
+.socialBarItems *{
+    justify-items: center;
+    
+}
+.socialLinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cardContainer{
+    color:white;
+    background-color:rgba(5, 5, 5, 0.486);
+    margin:10vh 10vw 10vh 10vw;
+    border-style: solid;
+    border-color: rgba(15, 15, 15, 0.76);
+    border-width:10px;
+}
+.cardContainer h4{
+    padding:20px;
+}
+nav{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    color:white;
+    background-color: dimgrey;
+}
+.link{
+    color:white;
+    text-decoration: none;
+    font-size: large;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    text-align: center;
+    color:white;
+    margin:2rem;
+}
+.title .contactHeading{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+}
+.contactHeading h2{
+    width:fit-content;margin-left: 30vw;border:3px solid grey; border-radius:15%;background-color: grey;
+}
+.title .contactDetails{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.banner{
+    margin:5rem 0 5rem 0;
+    padding:40px 0 40px 0;
+}
+.banner div{
+    margin:2rem 0 2rem 0;
+    font-size:larger;
+    font-weight: bolder;
+    font-style: italic;
+}
+.banner div:hover{
+    animation-play-state: paused;
+}
+@keyframes banner{
+    0% {
+      }
+    100% {
+        transform: translateX(5%);
+    }
+}
+@keyframes banner2{
+    0% {
+        transform: translateX(5%)
+    }
+    100% {
+      }
+}
+.animie1{
+    animation-name:banner;
+    animation-duration: 1s;animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.animie2{
+    animation-name:banner2;
+    animation-delay: 3s;
+    animation-duration:1s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+} 
+@keyframes scale {
+    from{}
+    to{transform:scale3d(1.2,1.2,1.2);
+}
+    
+}
+.portfolioContainer >:nth-child(2n){
+    animation-name:scale;
+    animation-direction: alternate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.portfolioContainer >:nth-child(2n+1){
+    animation-name:scale;
+    animation-direction: alternate-reverse;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.portfolio{
+    padding:50px 0 50px 0px;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.portfolioContainer{
+    padding:2rem 0 2rem 0;
+    display:flex;
+    flex-direction: row;
+    font-size:large;
+    justify-content: space-around;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@keyframes background {
+    0%{background-color:grey;color:black}
+    100%{background-color:black;color:white}
+}
+.skillName >button{
+    animation-name: background; 
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes border {
+    0%{}
+    100%{border-color:grey;}
+}
+.skillContainer>.skillItems{
+    animation-name: border; 
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cardContainer > .Education_container{
+    animation-name:background;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease;
+}
+.cardContainer > .Education_container:nth-child(1){animation-delay: 0s;}
+.cardContainer > .Education_container:nth-child(2){animation-delay: 0.5s;}
+.cardContainer > .Education_container:nth-child(3){animation-delay: 1s;}
+.Education_container{
+    border-style: solid;
+    border-color: rgba(15, 15, 15, 0.76);
+    border-width:5px 0 5px 0;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+ }
+ .Education_title{display:flex;flex-direction:row;justify-content:space-around;}
+ .Education_header,.percent{ margin:20px; font-size: x-large; text-align:center;}
+ .collegeName,.batch,.stream{ margin:5px; font-size:large; text-align: center;}
+
+ .skillName{
+    margin:10px;
+    padding:10px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+ }
+ .skillName button{
+    width:300px;
+    flex-grow: 0.2;
+ }
+ .skillContainer{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    flex-wrap:wrap;
+    flex-grow: 0.8;
+
+}
+.skillContainer div{
+    border-style: solid;
+    border-width: 5px;;
+    border-color: rgba(15, 15, 15, 0.76);
+    text-align: center;
+    margin:10px;
+    padding:10px;
+    font-size: x-large;
+    
+}
+.project_container{
+    display:flex;
+   
+    flex-direction:column;
+    align-items:left;
+    border-width:5px 0 5px 0;
+    border-style: solid;border-color: rgba(15, 15, 15, 0.76);
+}
+.projectTitle{text-align:Left;border-width:0 0 2px 0;border-style: solid; border-color: black;font-size:xx-large;font-weight: bold;padding:10px;}
+.projectDetails{text-align: left;font-size:larger;font-weight:600;margin-bottom:0px}
+.projectLinks{text-align:left;border-width:3px 0 3px 0;padding:10px; border-style: solid;border-color:rgba(15, 15, 15, 0.76); }
+.projectLinks a{
+    margin:5px;
+}
+.input{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding:1rem;
+}
+.inputId{
+    width:fit-content;
+}
+.inputField{
+    margin:0 2rem 0 2rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 1;
+    
+}
+.bottomNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:0 10vw 10vh 10vw;
+    width: 80vw;
+}
+.bottomNavItem1{
+    justify-items: flex-start;
+}
+.bottomNavItem2{
+    justify-items:flex-end;
+}
+.formSubmit{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (min-width:900px) {
+    .menuIcon{
+        display:none
+    }
+    
+}
+@media  screen and (max-width:1200px) {
+    .banner div{
+        white-space: nowrap;
+    }
+    .cardContainer{
+        margin:15vh 0vw 10vh 0vw;
+        border-style: solid;
+        border-color: rgba(15, 15, 15, 0.76);
+        border-width:5px;
+    }
+    @keyframes banner{
+        0% {
+          }
+        100% {
+            transform: translateX(30%);
+        }
+    }
+    @keyframes banner2{
+        0% {
+            transform: translateX(30%)
+        }
+        100% {
+          }
+    }
+    
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media screen and (max-width:500px) {
+    .nav{
+        width:fit-content;
+    }
+    .welcome{
+        margin:15vh 0 20vh 0vw;
+    }
+    .cardContainer{
+        margin:15vh 0vw 10vh 0vw;
+        border-style: solid;
+        border-color: rgba(15, 15, 15, 0.76);
+        border-width:5px;
+    }
+    .title h1{
+        font-size: x-large;
+    }
+    .banner{
+        width:fit-content;
+        font-size: medium;
+    }
+    .banner div{
+        white-space: nowrap;
+        overflow-x: hidden;
+    }
+    .mobileOnly{
+        display:none;
+    }
+    @keyframes banner{
+        0% {
+          }
+        100% {
+            transform: translateX(10%);
+        }
+    }
+    @keyframes banner2{
+        0% {
+            transform: translateX(10%)
+        }
+        100% {
+          }
+    }
+    
 }
