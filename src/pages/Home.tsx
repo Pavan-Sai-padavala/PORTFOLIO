@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { AppBar,Avatar,Box,Button,Drawer,Icon,IconButton,Menu,Stack,Toolbar, Typography } from "@mui/material";
-import SocialBar2 from "./SocialBar2";
+import SocialBar2 from "../components/SocialBar2";
 import MenuIcon from '@mui/icons-material/Menu';
-import logo from './logo.jpg';
+import logo from '../components/logo.jpg';
 
 function Home(){
     const text1='PAVAN SAI PADAVALA';

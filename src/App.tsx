@@ -1,11 +1,11 @@
 import React from 'react';
-import Welcome from './components/Welcome';
-import Home from './components/Home';
-import Contact from './components/Contacts'
+import Welcome from './pages/Welcome';
+import Home from './pages/Home';
+import Contact from './pages/Contacts'
 import {About} from './components/About';
-import { Projects } from './components/Projects';
-import { Education } from './components/Education';
-import { Skills } from './components/Skills';
+import { Projects } from './pages/Projects';
+import { Education } from './pages/Education';
+import { Skills } from './pages/Skills';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';

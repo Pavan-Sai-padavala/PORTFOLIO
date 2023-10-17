@@ -1,6 +1,6 @@
 import React from 'react'
-import BottomNav from './BottomNav'
-import { IconButton, Link, Typography } from '@mui/material'
+import BottomNav from '../components/BottomNav'
+import { Link, Typography } from '@mui/material'
 import { SocialIcon } from 'react-social-icons'
 
 export const Projects = () => {

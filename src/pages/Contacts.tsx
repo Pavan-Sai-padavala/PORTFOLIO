@@ -1,8 +1,8 @@
 import { Button, Input, InputLabel, Typography } from '@mui/material';
 import React from 'react'
 import { useNavigate, useSubmit } from 'react-router-dom'
-import BottomNav from './BottomNav';
-import SocialBar2 from './SocialBar2';
+import BottomNav from '../components/BottomNav';
+import SocialBar2 from '../components/SocialBar2';
 const Contact = () => {
     const navigate=useNavigate();
     function Func(){

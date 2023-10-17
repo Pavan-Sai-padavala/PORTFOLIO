@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import {Typography, Button, Paper} from '@mui/material';
 import { grey } from '@mui/material/colors';
-import SocialBar from './SocialBar';
+import SocialBar from '../components/SocialBar';
 
 
 const Welcome = () => {
