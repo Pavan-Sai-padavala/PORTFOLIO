@@ -286,6 +286,20 @@ nav{
     flex-direction: row;
     justify-content: center;
 }
+#updateTitle{
+    color:aliceblue;
+    margin:10vh 20vw 0 20vw;border:3px solid grey;
+    padding:10px;
+}
+#updateContainer{
+    margin:0 20vw 10vh 20vw;border:3px solid grey;
+    display:flex;flex-direction: column;
+    align-content: 'flex-start';
+    border-top: 0;
+}
+.updateItem{
+    color:whitesmoke
+}
 
 @media screen and (min-width:900px) {
     .menuIcon{
@@ -321,6 +335,12 @@ nav{
 }
 
 @media screen and (max-width:500px) {
+    #updateTitle{
+        margin:10vh 0 0 0;
+    }
+    #updateContainer{
+        margin:0 0 10vh 0;
+    }
     .nav{
         width:fit-content;
     }

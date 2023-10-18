@@ -50,6 +50,7 @@ function Home(){
                         <Button variant="outlined"><Link className="link" to='/Contact'>Hire me</Link></Button>
                     </Stack>
                 }
+        <Link style={{marginLeft:'40vw'}} className="link" to='/Updates'><Button variant="outlined">&#10024;&#127775;What's new updates&#127775;&#10024;</Button></Link>
         <Outlet />
         <SocialBar2 />
         </>

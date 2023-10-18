@@ -9,7 +9,7 @@ const SocialBar = () => {
         <div>Socials</div>
       </div>
       <div className='socialBarItems1'>
-        <div style={{flexGrow:1}}>Sept@2023</div>
+        <div style={{flexGrow:1}}>October@2023</div>
         <Stack direction='row' spacing={2} divider={<Divider orientation='vertical'/>}>
           <Link href='https://twitter.com/Pavan_pps' target="_blank" rel="noopener noreferrer">Twitter</Link>
           <Link href="https://www.linkedin.com/in/pavan-sai-padavala-6024a0194" target="_blank" rel="noopener noreferrer">LinkedIn</Link>

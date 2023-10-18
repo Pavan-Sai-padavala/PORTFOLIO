@@ -9,6 +9,7 @@ import { Skills } from './pages/Skills';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import Updates from './pages/Updates';
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
@@ -26,6 +27,7 @@ function App() {
           <Route path='Skills' element={<Skills />}/>
         </Route>
         <Route path='Contact' element={<Contact />}/>
+        <Route path='Updates' element={<Updates />} />
       </Routes>
   </BrowserRouter> 
   </ThemeProvider>
