@@ -306,6 +306,10 @@ nav{
 .updates button{
     margin:10vw 0 0 40vw;
 }
+.resumeContainer{
+    display: flex;justify-content: space-around;
+    margin:10vh 10vw 10vh 10vw;
+}
 
 @media screen and (min-width:900px) {
     .menuIcon{
@@ -322,6 +326,10 @@ nav{
         border-style: solid;
         border-color: rgba(15, 15, 15, 0.76);
         border-width:5px;
+    }
+    .resumeContainer{
+        margin:5vh 0vw 5vh 0vw;
+        font-size:12px;
     }
     @keyframes banner{
         0% {
@@ -357,7 +365,7 @@ nav{
         margin:12vh 0 20vh 0vw;
     }
     .cardContainer{
-        margin:15vh 0vw 10vh 0vw;
+        margin:10vh 0vw 10vh 0vw;
         border-style: solid;
         border-color: rgba(15, 15, 15, 0.76);
         border-width:5px;

@@ -4,6 +4,7 @@ import { AppBar,Avatar,Box,Button,Drawer,Icon,IconButton,Menu,Stack,Toolbar, Typ
 import SocialBar2 from "../components/SocialBar2";
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../components/logo.jpg';
+import Resume from "../components/Resume";
 
 function Home(){
     const text1='PAVAN SAI PADAVALA';
@@ -51,6 +52,7 @@ function Home(){
                     </Stack>
                 }
         <Link className="updates" to='/Updates'><Button variant="outlined">&#10024;&#127775;What's new updates&#127775;&#10024;</Button></Link>
+        <Resume />
         <Outlet />
         <SocialBar2 />
         </>
