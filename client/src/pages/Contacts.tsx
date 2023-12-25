@@ -26,7 +26,7 @@ const Contact = () => {
         e.preventDefault();
         try{
             setProcessingState("Sending Message");
-            const response = await fetch("http://localhost:3000/mail", {
+            const response = await fetch("https://backend-service-c1fx.onrender.com/mail", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
