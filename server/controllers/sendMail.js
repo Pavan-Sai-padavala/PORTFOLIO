@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const transporter=require("../config/nodemailer").transporter;
 
-module.exports=function mailConfig(name,to,subject,body){
+module.exports=function mailConfig(name,to,subject,body,callback){
     let source = fs.readFileSync('Templates\\HelloEmailTemplate.html', 'utf8');
     let template = handlebars.compile(source);
     let replacements = {
@@ -16,17 +16,21 @@ module.exports=function mailConfig(name,to,subject,body){
     let mailOptions={
         from: "pavansaipadavala@gmail.com",
         to: to,
-        subject:subject,
+        subject:name + '@'+subject,
         html: htmlToSend
     }
 
 
-transporter.sendMail(mailOptions, function(err, data) {
-    if (err) {
-      console.log("Error " + err);
-    } else {
-      console.log("Email sent successfully");
-      res.sendStatus(200);
-    }
+    transporter.sendMail(mailOptions, function(err, data) {
+      if (err) {
+        console.log("Error " + err);
+        callback({ error: true, message: 'Error sending email' });
+      } else if (data.accepted.length === 0) {
+        console.log("Email not sent");
+        callback({ error: true, message: 'Email not sent' });
+      } else {
+        console.log("Email sent successfully");
+        callback(null);
+      } 
   })
 }
