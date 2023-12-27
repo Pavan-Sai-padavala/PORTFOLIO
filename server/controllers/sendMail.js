@@ -4,7 +4,7 @@ const fs = require('fs');
 const transporter=require("../config/nodemailer").transporter;
 
 module.exports=function mailConfig(name,to,subject,body,callback){
-    let source = fs.readFileSync('Templates\\HelloEmailTemplate.html', 'utf8');
+    let source = fs.readFileSync('Templates/HelloEmailTemplate.html', 'utf8');
     let template = handlebars.compile(source);
     let replacements = {
       name: name,
