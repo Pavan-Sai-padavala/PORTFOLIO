@@ -1,11 +1,12 @@
 import Button from '@mui/material/Button/Button'
-import React from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import { toggleState } from '../Redux Store/features/toggleSlice'
+
 type skillTags={
     title:String,
     skillItems:String[]
 }
+
 const SkillItem = (props:skillTags) => {
   const state=useSelector((state: { toggle: any; })=>state.toggle);
   const dispatch=useDispatch();
@@ -14,7 +15,7 @@ const SkillItem = (props:skillTags) => {
     <div className='skillName'>
           <Button component='button' variant='outlined' size='large'onClick={() => dispatch(toggleState(props.title))}>{props.title}</Button>
           {(state==props.title) && (<div className='skillContainer'>{skillGen}</div>)}
-        </div>
+    </div>
   )
 }
 

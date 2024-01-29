@@ -1,11 +1,12 @@
 import { Button, Typography ,Link} from '@mui/material';
-import React from 'react'
+
 type updateProps={
     imgPath:string;
     title:String;
     info:String;
     link:string;
 }
+
 const updateItem = (props:updateProps) => {
   return (
     <div className='updateItem' style={{display:'flex',justifyContent:'space-evenly', margin:'20px'}}>
@@ -20,7 +21,7 @@ const updateItem = (props:updateProps) => {
                 <Button>check out</Button>
            </Link>
            </div>
-        </div>
+       </div>
        
     </div>
   )

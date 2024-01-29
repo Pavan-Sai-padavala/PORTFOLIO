@@ -1,9 +1,9 @@
 import { Button, Link, Typography } from '@mui/material'
-import React from 'react'
-import { NavLink } from 'react-router-dom'
 import { SocialIcon } from 'react-social-icons'
 import { useSelector,useDispatch } from 'react-redux'
+
 import { toggleState } from '../Redux Store/features/toggleSlice'
+
 type projectItems={
     title:String,
     description:String[];
@@ -11,6 +11,7 @@ type projectItems={
     links?:string[];
     stack:String[]
 }
+
 const ProjectItem = (props:projectItems) => {
   const state=useSelector((state: { toggle: any; })=>state.toggle);
   const dispatch=useDispatch();

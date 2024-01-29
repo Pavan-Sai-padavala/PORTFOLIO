@@ -1,5 +1,4 @@
-import { Box, Button, Divider, IconButton, Link, Stack } from '@mui/material'
-import React from 'react'
+import {Divider, Link, Stack } from '@mui/material'
 
 const SocialBar = () => {
   return (

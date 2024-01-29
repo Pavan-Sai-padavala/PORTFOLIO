@@ -1,23 +1,23 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Link, NavLink, Outlet } from "react-router-dom";
-import { AppBar,Avatar,Box,Button,Drawer,Icon,IconButton,Menu,Stack,Toolbar, Typography } from "@mui/material";
-import SocialBar2 from "../components/SocialBar2";
+import { useEffect,useState } from "react";
+import { Link, Outlet } from "react-router-dom";
+import { AppBar,Avatar,Button,IconButton,Stack,Toolbar, Typography } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
+
+import SocialBar2 from "../components/SocialBar2";
 import logo from '../components/logo.jpg';
 import Resume from "../components/Resume";
 
 function Home(){
     const text1='PAVAN SAI PADAVALA';
     const [title, settitle] = useState(text1);
-    
     const text2='Creative Fronend Developer';
     const [isDrawerOpen, setisDrawerOpen]=useState(false);
+
     useEffect(() => {
         const interval = setInterval(() => {
             settitle((prevTitle) => (prevTitle === text1 ? text2 : text1));
           }, 1000);
         return () => clearInterval(interval);   
-        
     });
     return(
         <><AppBar position="static">

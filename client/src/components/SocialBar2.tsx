@@ -1,5 +1,4 @@
 import { Divider, Link, Stack } from '@mui/material'
-import React from 'react'
 import { SocialIcon } from 'react-social-icons'
 
 const SocialBar2 = () => {

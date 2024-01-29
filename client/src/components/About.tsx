@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
-import BottomNav from './BottomNav'
-import { Button, Link, Typography } from '@mui/material'
+import { useState } from 'react'
+import { Button, Link} from '@mui/material'
 import { SocialIcon } from 'react-social-icons'
+
+
+import BottomNav from './BottomNav'
 
 export const About = () => {
   const [visible, setvisible] = useState(false)
   return (
-        <><div className='cardContainer'>
+      <><div className='cardContainer'>
       <div className='title'>
         <h1>PAVAN SAI PADAVALA</h1>
         <div className="contactHeading" onClick={()=>setvisible(!visible)}>
