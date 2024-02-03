@@ -6,8 +6,14 @@ import { SocialIcon } from 'react-social-icons';
 import UpdateItem from '../components/UpdateItem'
 import SocialBar from '../components/SocialBar';
 import BottomNav from '../components/BottomNav';
-import banner from '../banner.png.jpg';
-import logo from '../components/logo.jpg';
+
+import firstOpenSource from '../Assets/first_open_source.jpg';
+import hactoberfest from '../Assets/hactoberfest.jpg';
+import github from '../Assets/github.jpg';
+import domain from '../Assets/godaddy domain.jpg';
+import blog from '../Assets/blog.jpg';
+import portfolio from '../Assets/portfolio.jpg';
+import logo from '../Assets/logo.jpg';
 
 const Updates = () => {
         const text1='PAVAN SAI PADAVALA';
@@ -39,30 +45,38 @@ const Updates = () => {
                     
                     <Typography variant='body1'>Please do connect with me</Typography>
                     
-                    <Link href="https://github.com/Pavan-Sai-padavala" target="_blank" rel="noopener noreferrer">
-                        <Button>twitter<SocialIcon style={{height:'2rem',width:'2rem'}} network='twitter'/></Button>
+                    <Link href="https://twitter.com/Pavan_pps/" target="_blank" rel="noopener noreferrer">
+                        <Button>X(formerly, twitter)<SocialIcon style={{height:'2rem',width:'2rem'}} network='x'/></Button>
                     </Link>
                     
-                    <Link href="https://www.linkedin.com/in/pavan-sai-padavala-6024a0194" target="_blank" rel="noopener noreferrer">
+                    <Link href="https://www.linkedin.com/in/pavan-sai-padavala" target="_blank" rel="noopener noreferrer">
                         <Button>linkedin<SocialIcon style={{height:'2rem',width:'2rem'}} network='linkedin'/></Button>
                     </Link>
                 </div>
 
                 <div id='updateContainer' style={{height:'40vh',overflowY:'scroll'}}>
-                    <UpdateItem imgPath={banner} title="Got my custom Domain from GoDaddy"
+                    <UpdateItem imgPath={portfolio} title="Grand Launch of My Portfolio"
+                        info="Launched my portfolio across my Linkedin Network to showcase my skills expertise in tech" 
+                        link="https://x.com/Pavan_pps/status/1714190511702225046?s=20"/>
+
+                    <UpdateItem imgPath={blog} title="Started Blogging on web applications architecture"
+                        info="Composing blogs on web applications to enagage with the tech community and build professional brand" 
+                        link="https://x.com/Pavan_pps/status/1714190511702225046?s=20"/>
+
+                    <UpdateItem imgPath={domain} title="Got my custom Domain from GoDaddy"
                         info="I have claimed my custum domain from GODaddy as part of MLH GLobal Hack Week" 
                         link="https://x.com/Pavan_pps/status/1714190511702225046?s=20"/>
 
-                    <UpdateItem imgPath={banner} title="My First Merge Request got accepted"
+                    <UpdateItem imgPath={github} title="My First Merge Request got accepted"
                         info="Contributed a customized bottom navigation to an open-sourced ready-to use react componenets" 
                         link="https://github.com/vaishnavi-3969/Web-Componentify/pull/36" />
             
-                    <UpdateItem imgPath={banner} title="Partcipated on HactoberFest 2023"
+                    <UpdateItem imgPath={hactoberfest} title="Partcipated on HactoberFest 2023"
                         info="My first ever open-source competition where i learn the 
                         writing clean code, code documentation and Networking" 
                         link="https://www.holopin.io/userbadge/clnbv57wp03660gl96haeewld" />
                     
-                    <UpdateItem imgPath={banner} title="My first open-source contribution"
+                    <UpdateItem imgPath={firstOpenSource} title="My first open-source contribution"
                         info="Developed coding focussed UI to the react code 
                         editor that compiles over 40+ Languages" link="https://x.com/Pavan_pps/status/1712467434333225384?s=20"/>
                 

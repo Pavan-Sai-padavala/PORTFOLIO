@@ -1,11 +1,15 @@
 import { useState } from 'react'
 import { Button, Input, InputLabel, Typography } from '@mui/material';
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import Alert from '@mui/material/Alert';
+
 import BottomNav from '../components/BottomNav';
 import SocialBar2 from '../components/SocialBar2';
-import mailSuccessPic from '../mail success.jpg'
+import mailSuccessPic from '../Assets/mail success.jpg'
+import React from 'react';
 
 const Contact = () => {
     const [processingState, setProcessingState]=useState("Let's work like a pro")
@@ -49,6 +53,7 @@ const Contact = () => {
             toast.error("Error sending mail");
       }
     }
+    const [open, setOpen] = useState(true)
       
     return (
       <>
@@ -62,6 +67,9 @@ const Contact = () => {
             </div> ):(
             
             <div className='cardContainer'>
+              { open && <Alert severity='info' color="success" style={{fontSize:'larger'}} variant='outlined' onClose={()=>setOpen(false)}>
+                Hurray..! Contact Form is now Live
+              </Alert>}
               <div>
                 <Typography variant='h4' sx={{fontStyle:'italic'}}>Get a Talented in your team</Typography>
               </div>

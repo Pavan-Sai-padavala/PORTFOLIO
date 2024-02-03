@@ -4,7 +4,7 @@ import { AppBar,Avatar,Button,IconButton,Stack,Toolbar, Typography } from "@mui/
 import MenuIcon from '@mui/icons-material/Menu';
 
 import SocialBar2 from "../components/SocialBar2";
-import logo from '../components/logo.jpg';
+import logo from '../Assets/logo.jpg';
 import Resume from "../components/Resume";
 
 function Home(){

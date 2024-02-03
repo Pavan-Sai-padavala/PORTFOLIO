@@ -12,9 +12,9 @@ export const Skills = () => {
         <Stack spacing={4}>
           <SkillItem title="Programming & Coding" skillItems={["Java","Python","Data Structures"]} />
         
-          <SkillItem title="Frontend Development" skillItems={["HTML5","CSS3","JavaScript","Jquery"]} />
+          <SkillItem title="Frontend Development" skillItems={["Java Script","React.js","Redux","Material UI"]} />
         
-          <SkillItem title="React Framework" skillItems={["React Hooks","React Router","Reddux"]} />
+          <SkillItem title="Backend Development" skillItems={["REST API","Node.js","Express.js","MongoDB"]} />
         
           <SkillItem title="Software Essentials" skillItems={["MySQL","Git","Github","VS Code"]} />
         </Stack>

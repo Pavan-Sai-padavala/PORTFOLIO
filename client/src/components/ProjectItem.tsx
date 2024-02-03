@@ -7,7 +7,6 @@ import { toggleState } from '../Redux Store/features/toggleSlice'
 type projectItems={
     title:String,
     description:String[];
-    status:boolean;
     links?:string[];
     stack:String[]
 }
@@ -19,7 +18,6 @@ const ProjectItem = (props:projectItems) => {
     <div className="project_container" onMouseEnter={()=>dispatch(toggleState(props.title))} onMouseLeave={()=>dispatch(toggleState('None'))}>
         <div className="projectTitle">
           <Typography variant="h6" style={{padding:"0 20px 0 20px"}}>{props.title}</Typography>
-          {props.status && <div className='projectStatus'>Working</div>}
         </div>
         <ul className="projectDetails">
           {props.description.map((line)=><li>{line}</li>)}
