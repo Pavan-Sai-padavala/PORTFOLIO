@@ -19,10 +19,10 @@ app.post("/mail",(req,res)=>{
     });
 })
 
-const port=System.env.PORT || 3000;
+const port=process.env.PORT || 3000;
 app.listen(port,(err)=>{
     if(err)
       console.log(err);
-    console.log("Server running on port",port)
+    console.log("Server running on port ${port}");
 }
 );
