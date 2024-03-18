@@ -254,20 +254,22 @@ nav{
 .projectTechStack{
     display:flex;justify-content:flex-start;padding: 0 20px 0 20px
 }
-.input{
+.inputRadio{
     display:flex;
     flex-direction: row;
-    justify-content: space-around;
-    padding:1rem;
+    align-content: space-between;
+    padding:2 rem;
+    margin:1rem;
 }
-.inputId{
-    width:fit-content;
+.inputRadio *{
+    margin:1rem;
 }
 .inputField{
     margin:0 2rem 0 2rem;
     display:flex;
     flex-direction: column;
     justify-content: space-around;
+    margin:1rem;
     flex-grow: 1;
     
 }
