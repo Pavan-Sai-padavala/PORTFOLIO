@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Developer Template</title>
+    </head>
+    <body>
+        <H3>Hi {{Name}},</H3>
+
+        <H5>Thankyou for exploring my portfolio and spending your 
+            valuable time in messaging me.
+        </H5>
+        <p>Here are the details you sent: 
+           <h5>{{Message}}</h5>
+            Will Contact you shortly... Thanking you once 
+            again for visiting my portfolio.
+        </p>
+        {{#if Social}}
+            <h5>Looking forward to connect further with you on your <a href={{Social}}>Linkedin</a></h5>
+        {{/if}}
+        {{#if Contact}}
+            <h5>Stay tuned to have a quick 1:1 call({{Contact}})... Have a nice day :)</h5>
+        {{/if}}
+        <h5 style="text-align: center;">Thanking you</h5>
+        <p>Regards,</p>
+        <p>P.Pavan Sai, <br> 8332078948</p>
+    </body>
+</html>

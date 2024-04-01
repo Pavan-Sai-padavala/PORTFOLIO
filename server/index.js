@@ -8,15 +8,13 @@ app.use(express.json());
 
 const mailConfig=require("./controllers/sendMail");
 app.post("/mail",(req,res)=>{
-    if (!req.body.to || !req.body.subject || !req.body.body) {
-        return res.status(400).send('Required field is missing');
-    }
-    mailConfig(req.body.name,req.body.to,req.body.subject,req.body.body,(err)=>{
-        if(err)
-           res.status(500).send(err.message);
-        else
-           res.status(200).json({ message: 'Email sent successfully' });
-    });
+        mailConfig(req.body,(err)=>{
+            if(err)
+                res.status(500).send(err.message);
+            else
+                res.status(200).json({ message: 'Recruiter Email Sent Successfully' });
+        });
+   
 })
 
 const port=process.env.PORT || 3000;
