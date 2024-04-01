@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, Input, InputLabel} from '@mui/material';
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useDispatch } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { connect } from 'react-redux';
+import { formState } from '../Redux Store/features/formSlice';
 type Inputs={
   Name: string,
   Email: string,
@@ -14,13 +16,18 @@ type Inputs={
   social: string,
   mobile:number
 }
+const mapStateToProps = (state: { form: any; }) => ({
+  formState: state.form,
+});
 const ContactForm = () => {
     const {register, handleSubmit,formState:{errors}, watch}=useForm<Inputs>();
     const professionValue=watch("profession")
     const dispatch=useDispatch();
+    const  [submit, setsubmit] = useState("Submit");
     const onSubmit: SubmitHandler<Inputs> = async(data) =>{ 
+      setsubmit("Submitting");
       try{
-        const response = await fetch("https://portfolio-lrg6h0c8s-pavan-sai-padavalas-projects.vercel.app/", {
+        const response = await fetch("https://dynamiccontactform-4wk3a83du-pavan-sai-padavalas-projects.vercel.app/mail", {
           method: "POST",
           headers: {
              "Content-Type": "application/json",
@@ -28,18 +35,18 @@ const ContactForm = () => {
           body: JSON.stringify(data),
         });
   
-        if (response.ok) {
-          dispatch({type:"form/formState", payload: "Email Sent Successfully"});
+        if (response.status===200) {
+          dispatch(formState("Email Sent Successfully"));
           const data = await response.json();
           console.log(data);
         } 
         else {
           const errorData = await response.json();
-          throw new Error('errorData.message');
+          throw new Error(errorData.message);
         }
     } 
     catch(error) {
-      dispatch({type:"form/formState", payload: "Error Sending Email"});
+      dispatch(formState("Error Sending Email"));
           console.error('Error:', error);
           toast.error("Error sending mail");
     }
@@ -105,12 +112,12 @@ const ContactForm = () => {
       
       <div className='inputField'>
       <InputLabel htmlFor='mobile'>Contact Number</InputLabel>
-      <Input type='number' {...register("mobile",{max:{value:10,message:"Mobile Number should be a 10 digit number"}})} id='mobile' placeholder='8332078948' />
+      <Input type='number' {...register("mobile",)} id='mobile' placeholder='8332078948' />
       {errors.mobile && <p style={{color:'orange'}}>&#9432; {errors.mobile.message}</p>}
       </div>
       
       <div className='formSubmit'>
-      <Button type="submit" variant='outlined'>Submit</Button>
+      <Button type="submit" variant='outlined'>{submit}</Button>
       </div>
       
       </form>
@@ -118,4 +125,4 @@ const ContactForm = () => {
   )
 }
 
-export default ContactForm
+export default connect(mapStateToProps)(ContactForm);

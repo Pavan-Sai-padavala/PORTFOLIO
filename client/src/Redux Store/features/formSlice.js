@@ -1,17 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const formStateMap = {
+  'Email Sent Successfully': 'mailSent',
+  'Error Sending Email': 'Error',
+  "formReset": "None",
+};
+
 export const formSlice = createSlice({
   name: 'form',
   initialState: 'None',
   reducers: {
-    formState: (state, action) => {
-        if(action.payload=='Email Sent Succesfully ')
-          return 'mailSent';
-        if(action.payload=='Error Sending Email')
-          return 'Error';
-        if(action.payload=='formReset')
-          return action.payload;
-      },
+    formState: (state, action) => formStateMap[action.payload] || state,
   },
 });
 
