@@ -27,8 +27,8 @@ const ContactForm = () => {
     const onSubmit: SubmitHandler<Inputs> = async(data) =>{ 
       setsubmit("Submitting");
       try{
-        const response = await fetch("https://dynamiccontactform-4wk3a83du-pavan-sai-padavalas-projects.vercel.app/mail", {
-          method: "POST",
+        const response = await fetch("https://backend-service-c1fx.onrender.com/mail", { 
+        method: "POST",
           headers: {
              "Content-Type": "application/json",
             },
